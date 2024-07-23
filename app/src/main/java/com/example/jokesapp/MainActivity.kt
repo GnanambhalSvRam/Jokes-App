@@ -54,58 +54,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-//fun MyApp(jokesViewModel: JokesViewModel = viewModel()) {
-//
-//    val jokes by jokesViewModel.jokes.collectAsState()
-//    //var jokes by viewModel.jokes.collectAsState()
-//
-//    Scaffold(
-//        topBar = {
-//            TopAppBar(
-//                colors = topAppBarColors(
-//                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-//                    titleContentColor = MaterialTheme.colorScheme.primary,
-//                ),
-//                title = {
-//                    Text("Chuck Norris Jokes")
-//                }
-//            )
-//        },
-//        content = { padding ->
-//            Column (
-//                modifier = Modifier
-//                    .fillMaxSize()
-//                    .padding(padding),
-//                verticalArrangement = Arrangement.Top
-//            ) {
-//                Button(
-//                    //onClick = { fetchJoke { newJoke -> joke = newJoke} },
-//                    onClick = { jokesViewModel.fetchJoke() },
-//                    modifier = Modifier.fillMaxWidth()
-//                ) {
-//                    Text("Get Joke")
-//                }
-//                Spacer(modifier = Modifier.height(16.dp))
-//                LazyColumn (
-//                    modifier = Modifier.fillMaxSize(),
-//                    verticalArrangement = Arrangement.spacedBy(8.dp)
-//                ){
-//                    items(jokes) { joke ->
-//                        Text(
-//                            text = joke,
-//                            style = MaterialTheme.typography.bodyMedium,
-//                            modifier = Modifier.padding(16.dp)
-//                        )
-//                    }
-//                }
-//            }
-//        }
-//    )
-//
-//}
-
 fun MyApp(jokesViewModel: JokesViewModel = viewModel()) {
 
     val jokes by jokesViewModel.jokes.collectAsState()
@@ -175,12 +123,4 @@ private fun fetchJoke(onJokeReceived : (String) -> Unit) {
         }
     }
 }
-
-//This is done in the MainActivity.kt for the initial instructions. Moved to JokesViewModel.kt.
-//interface ApiService {
-//    @GET("jokes/random")
-//    suspend fun getRandomJoke(): JokeResponse
-//}
-//
-//data class JokeResponse(val value: String)
 
