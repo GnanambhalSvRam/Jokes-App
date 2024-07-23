@@ -14,38 +14,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-//class JokesViewModel : ViewModel() {
-//    //private val _jokes = mutableStateListOf<String>()
-//    private val _jokes = MutableStateFlow<List<String>>(emptyList())
-//    //val jokes: List<String> = _jokes
-//    val jokes: StateFlow<List<String>> = _jokes
-//
-//    fun fetchJoke() {
-//        viewModelScope.launch {
-//            try {
-//                val retrofit = Retrofit.Builder()
-//                    .baseUrl("https://api.chucknorris.io/")
-//                    .addConverterFactory(GsonConverterFactory.create())
-//                    .build()
-//
-//                val api = retrofit.create(ApiService::class.java)
-//                val response = api.getRandomJoke()
-//                withContext(Dispatchers.Main) {
-//                    //_jokes.add(response.value)
-//                    _jokes.value += response.value
-//
-//                }
-//            } catch (e: Exception) {
-//                withContext(Dispatchers.Main) {
-//                    //_jokes.add("Failed to fetch joke!")
-//                    _jokes.value += "Failed to fetch joke!"
-//                }
-//            }
-//        }
-//    }
-//}
-
-class JokesViewModel(application: Application) : AndroidViewModel(application) {
+class JokesViewModel(application: Application) : AndroidViewModel(application)
+{
     private val jokeDao = AppDatabase.getDatabase(application).jokeDao()
     private val _jokes = MutableStateFlow<List<JokeEntity>>(emptyList())
     val jokes: StateFlow<List<JokeEntity>> = _jokes
@@ -67,6 +37,7 @@ class JokesViewModel(application: Application) : AndroidViewModel(application) {
                 val jokeEntity = JokeEntity(joke = response.value)
                 jokeDao.insert(jokeEntity)
                 fetchAllJokes()
+
             } catch (e: Exception) {
                 val jokeEntity = JokeEntity(joke = "Failed to fetch joke!")
                 jokeDao.insert(jokeEntity)
@@ -85,9 +56,11 @@ class JokesViewModel(application: Application) : AndroidViewModel(application) {
     }
 }
 
+//Network Services
+data class JokeResponse(val value: String)
+
 interface ApiService {
     @GET("jokes/random")
     suspend fun getRandomJoke(): JokeResponse
 }
 
-data class JokeResponse(val value: String)
