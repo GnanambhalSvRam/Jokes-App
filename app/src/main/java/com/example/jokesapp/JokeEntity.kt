@@ -1,3 +1,4 @@
+//Data class to represent a joke in the database
 package com.example.jokesapp
 
 import androidx.room.Entity
@@ -10,4 +11,3 @@ data class JokeEntity(
 )
 
 
-//Data class to represent a joke in the database
