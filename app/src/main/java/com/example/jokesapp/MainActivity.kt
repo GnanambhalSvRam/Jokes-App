@@ -72,8 +72,7 @@ fun MyApp(jokesViewModel: JokesViewModel = viewModel()) {
                 }
             )
         },
-
-
+        
         content = { padding ->
             Column (
                 modifier = Modifier
