@@ -9,7 +9,7 @@ A simple app to retrieve, store, and display Chuck Norris jokes
 5. Finally, add a Room database to store the jokes persistently so users don't lose old jokes when they close and reopen the app.
 
 **References**
-1. Scaffold - https://developer.android.com/develop/ui/compose/components/scaffold
+1. The UI: Scaffold - https://developer.android.com/develop/ui/compose/components/scaffold
 2. The workflow - https://www.geeksforgeeks.org/how-to-make-a-joke-app-in-android-using-api-call/
 3. Implementing the API service using retrofit (Network Layer) - Creating an API Service with Retrofit - https://medium.com/@imkuldeepsinghrai/api-calls-with-retrofit-in-android-kotlin-a-comprehensive-guide-e049e19deba9
 4. Creating a database, data access object, and an entity (Database Layer) - https://developer.android.com/training/data-storage/room#kotlin
