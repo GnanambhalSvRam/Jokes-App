@@ -13,8 +13,10 @@ A simple app to retrieve, store, and display Chuck Norris jokes
 2. The workflow - https://www.geeksforgeeks.org/how-to-make-a-joke-app-in-android-using-api-call/
 3. Implementing the API service using retrofit (Network Layer) - Creating an API Service with Retrofit - https://medium.com/@imkuldeepsinghrai/api-calls-with-retrofit-in-android-kotlin-a-comprehensive-guide-e049e19deba9
 4. Creating a database, data access object, and an entity (Database Layer) - https://developer.android.com/training/data-storage/room#kotlin
-5. Creating a local data storage with Room - https://medium.com/huawei-developers/room-database-with-kotlin-mvvm-architecture-477c3ad3c264
-6. Stackoverflow for dependencies issues
+5. Room database setup - https://medium.com/@sdranju/step-by-step-how-to-setting-up-and-implementing-room-database-aeb211c56702
+6. Creating a local data storage with Room - https://medium.com/huawei-developers/room-database-with-kotlin-mvvm-architecture-477c3ad3c264
+7. Creating an instance: companion object - https://medium.com/@kamalvaid/room-using-kotlin-room-persistence-library-18a74f1ea16e
+8. Stackoverflow for dependencies issues
 
 
 
