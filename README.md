@@ -1,5 +1,5 @@
 # Jokes-App
-A simple app to retrieve, store, and display Chuck Norris jokes
+A Kotlin app to retrieve, store, and display Chuck Norris jokes
 
 **Instructions**
 1. Start by creating an "empty activity" app that uses Compose (that's the default on the most recent version of Android Studio)
